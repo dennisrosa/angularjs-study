@@ -1,0 +1,27 @@
+.cb-active {
+    background-color: skyblue;
+}
+
+h2 {
+    text-align: center
+}
+
+.custom {
+    width: 60px !important;
+}
+
+.divSpace {
+    margin-top: 30px;
+    margin-bottom: 30px
+}
+
+.divNumberErro {
+    border-style: solid;
+    border-color: red;
+}
+
+.inputDice {
+    text-align: center;
+    font-size: 850%;
+    width: 150px
+}

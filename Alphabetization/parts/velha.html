@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Jogo da Velha</h1>
+
+    <div class="row" ng-controller="TicTacToeController" data-ng-init="reset()">
+        <div class="col-sm-6">
+            <div class="col-sm-6 com=sm-offset-1">
+                <div class="col-sm-4" ng-repeat="num in selected">
+                    <img ng-src="{{num.value}}" ng-click="nextMove($index);validate();" ng-disabled="{{num.disabled}}">
+
+                    </img>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-primary" ng=>Comecar novamente</button>
+        </div>
+    </div>
+</div>

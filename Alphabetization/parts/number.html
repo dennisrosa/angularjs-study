@@ -1,0 +1,20 @@
+<div class="row" ng-controller="NumberSequence">
+    <h2>Teste</h2>
+    <div class="col-sm-7">
+        <div class="btn-toolbar" role="toolbar" ng-repeat="i in [1,2,3,4,5]">
+
+            <div class="btn-group" role="group" ng-repeat="j in [1,2,3,4,5,6,7,8,9,10]">
+                <button type="button" class="btn btn-default custom" ng-click="check(i,j)" ng-class="isMarked(i,j)">
+                    <h3>{{getItem(((i-1)*10)+j)}}</h3> </button>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-sm-5">
+        <div class="btn-group" role="group" ng-repeat="num in selected">
+            <button type="button" class="btn btn-default custom">
+                <h3>{{num}}</h3>
+            </button>
+        </div>
+    </div>
+</div>

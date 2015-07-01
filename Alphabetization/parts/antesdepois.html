@@ -1,0 +1,12 @@
+<div class="container">
+    <h1> Antes e Depois </h1>
+    <div class="row" ng-controller="AntesDepoisController">
+        <div class="col-md-4 divSpace" ng-repeat="num in numbers" ng-class="isValid($index)">
+            <input type="number" ng-model="values['field_' + $index]" /> {{num}}
+            <input type="number" ng-model="posterior['field_' + $index]" />
+        </div>
+        <div class="row">
+            <button type="button" class="btn btn-primary" ng-click="validate()">Validar</button>
+        </div>
+    </div>
+</div>
