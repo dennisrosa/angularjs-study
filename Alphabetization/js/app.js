@@ -1,6 +1,6 @@
 var app = angular.module('Allphabetization', ['ngRoute', 'firebase']);
 
-
+app.constant('FURL', 'https://alphabetization.firebaseio.com');
 app.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
@@ -32,6 +32,14 @@ app.config(['$routeProvider',
             templateUrl: 'parts/velha.html',
             controller: 'TicTacToeController'
         }).
+        when('/questions', {
+            templateUrl: 'parts/questions.html',
+            controller: 'QuestionsController'
+        }).
+
+
+
+
         otherwise({
             redirectTo: '/abc'
         });
