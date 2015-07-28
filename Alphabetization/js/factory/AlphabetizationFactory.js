@@ -3,32 +3,26 @@
 app.factory('AlphabetizationFactory', function (FURL, $firebaseArray, $http) {
 
     var ref = new Firebase(FURL);
+    var words = $firebaseArray(ref.child('words'));
 
     var AlphabetizationFactory = {
 
 
-        questions: function () {
-            var quest = $firebaseArray(ref.child('questions'));
-            console.log(quest);
-            return quest;
+        // Word List
+        wordList: function () {
+            return words;
         },
 
-        details: function (question) {
-            var details = $firebaseArray(ref.child('questions').child(question));
-            console.log(details);
-            return details;
+        insertWord: function (word) {
+            words.$add(word);
         },
 
-        pictures: function (question) {
-            var pics = $firebaseArray(ref.child('pictures').child(question));
-            console.log(pics);
-            return pics;
+        saveWord: function (word) {
+            words.$save(word);
         },
 
-        picture: function (question, picture) {
-            var pic = $firebaseArray(ref.child('pictures').child(question).child(picture));
-            console.log(pic);
-            return pic;
+        getWord: function (id) {
+            return words.$getRecord(id);
         }
 
     };

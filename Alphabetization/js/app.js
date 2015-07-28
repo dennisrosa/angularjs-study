@@ -1,6 +1,7 @@
-var app = angular.module('Allphabetization', ['ngRoute', 'firebase']);
+var app = angular.module('Allphabetization', ['ngRoute', 'firebase', 'ui.grid']);
 
 app.constant('FURL', 'https://alphabetization.firebaseio.com');
+
 app.config(['$routeProvider',
   function ($routeProvider) {
         $routeProvider.
@@ -36,9 +37,11 @@ app.config(['$routeProvider',
             templateUrl: 'parts/questions.html',
             controller: 'QuestionsController'
         }).
-
-
-
+        when('/config', {
+            templateUrl: 'parts/config.html',
+            controller: 'ConfigController'
+        }).
+        
 
         otherwise({
             redirectTo: '/abc'

@@ -1,0 +1,43 @@
+<div class="container">
+
+    <div class="row" ng-show="browse">
+        <h1>Configuração</h1>
+        <div class="col-sm-4 col-sm-offset-3">
+            <div ui-grid="{ data: configList }" class="myGrid"></div>
+        </div>
+        <div class="row ">
+            <button class="btn btn-primary center-block" ng-click="add()">Novo</button>
+
+        </div>
+    </div>
+
+
+    <div class="row" ng-show="!browse">
+
+        <div class="col-md-6">
+            <h1>Edit</h1>
+            <form>
+                <div class="form-group">
+                    <label for="inputName">Nome</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Email" ng-model="selectedConfig.name">
+                </div>
+                <div class="form-group">
+                    <label for="inputDescricao">Descrição</label>
+                    <input type="text" class="form-control" id="inputDescricao" placeholder="Descricao" ng-model="selectedConfig.description">
+                </div>
+                <div class="form-group">
+                    <label for="inputPath">Path</label>
+                    <input type="text" class="form-control" id="inputPath" placeholder="Path" ng-model="selectedConfig.path">
+                </div>
+                <div class="form-group">
+                    <label for="inputType">Tipo</label>
+                    <select class="form-control" ng-options="item.id as item.tipo for item in tipos " ng-model="selectedConfig.type">
+                </div>
+
+                <button type="submit" class="btn btn-default" ng-click="save()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>

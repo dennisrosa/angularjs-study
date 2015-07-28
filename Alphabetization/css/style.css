@@ -8,6 +8,13 @@ h2 {
 
 .custom {
     width: 60px !important;
+    font-family: monospace;
+}
+
+.customABC {
+    font-family: monospace;
+    font-size: 250%;
+    width: 60px !important;
 }
 
 .divSpace {
@@ -24,4 +31,23 @@ h2 {
     text-align: center;
     font-size: 850%;
     width: 150px
+}
+
+.myGrid {
+    width: 500px;
+    height: 250px;
+}
+
+div.span4,
+div.span8 {
+    background-color: #eee;
+    border: 1px solid #888;
+    border-radius: 3px;
+    margin: -1px;
+}
+
+button {
+    border: 2px solid #888;
+    border-radius: 3px;
+    margin: 5px;
 }

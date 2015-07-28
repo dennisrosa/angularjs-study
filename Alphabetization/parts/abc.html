@@ -1,19 +1,18 @@
 <div class="container">
-    <h1> ABC Ordenado </h1>
+
+    <h1> ABC Ordenado 8</h1>
     <div class="row" ng-controller="ABCController">
-        <div class="col-sm-4 col-sm-offset-1">
-            <div class="col-sm-2 " ng-repeat="letra in array">
-                <button class="btn btn-default custom" ng-click="check($index)" ng-class="isMarked($index)">
-                    <h2>{{letra}}</h2>
-                </button>
-            </div>
-        </div>
-        <div class="col-sm-4">
-            <div class="col-sm-2 " ng-repeat="letra in selected">
-                <button class="btn btn-default custom">
-                    <h2>{{letra}}</h2>
-                </button>
+        <div class="col-sm-4 col-sm-offset-4">
+            <div class="row">
+                <div class="col-sm-2 pull-left" ng-repeat="letra in array">
+                    <div class="btn-group btn-group-lg">
+                        <button class="btn btn-default btn-lg customABC" ng-click="check($index)" ng-class="isMarked($index)">
+                            <h1>{{letra}}</h1>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
 </div>
